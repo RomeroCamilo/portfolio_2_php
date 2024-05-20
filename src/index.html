@@ -25,6 +25,23 @@
             background-color: #ddd;
             color: black;
         }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .content img {
+            width: 35%; /* Adjust size as needed */
+            height: auto;
+            border-radius: 15px; /* Adjust the value to get the desired roundness */
+        }
+        .content p {
+            margin: 0;
+            font-size: 24px; /* Adjust font size as needed */
+            width: 50%; /* Ensure the text takes up the remaining space */
+            text-align: right; /* Align text to the right */
+        }
     </style>
 </head>
 <body>
@@ -36,8 +53,10 @@
         <a href="#contact">Contact</a>
     </div>
 
-    <p>ABOUT ME</p>
-    <img src="images/camilo.jpeg">
+    <div class="content">
+        <img src="../images/camilo.jpeg" alt="Camilo">
+        <p>ABOUT ME</p>
+    </div>
 
 </body>
 </html>
