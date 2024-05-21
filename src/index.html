@@ -36,8 +36,13 @@
       align-items: flex-start; /* Align items at the top */
     }
 
-    .content img {
-      width: 35%; /* Adjust size as needed */
+    .container {
+      display: flex;
+      width: 35%; /* Set a fixed width */
+    }
+
+    .container img {
+      width: 100%; /* Adjust size as needed */
       height: auto;
       border-radius: 15px; /* Adjust the value to get the desired roundness */
     }
@@ -56,23 +61,27 @@
       font-size: 24px; /* Adjust font size as needed */
     }
 
-    .secondary-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 10px; /* Add some margin for spacing */
+    .description {
+      font-size: 18px;
+      margin-top: 20px;
+      text-align: center;
+      color: #555;
     }
 
-    .secondary-text p {
-      margin: 5px 0;
-      font-size: 24px;
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+      justify-items: center;
+      max-width: 100%; /* Ensure the grid doesn't exceed the width of the container */
     }
 
-    .secondary-text img {
-      width: 100px; /* Set a fixed width */
-      height: auto; /* Maintain aspect ratio */
-      border-radius: 15px; /* Adjust the value to get the desired roundness */
-      margin-top: 10px; /* Add some margin for spacing */
+    .image-grid img {
+      width: 100%; /* Make the image fill the container */
+      height: 100%; /* Make the image fill the container */
+      object-fit: cover; /* Cover the entire box without distortion */
+      border-radius: 10px; /* Adjust the value to get the desired roundness */
     }
 
     @keyframes color-change {
@@ -90,32 +99,32 @@
     .hunter-container p {
       animation: color-change 4s infinite;
     }
-
-    .description {
-      font-size: 18px;
-      margin-top: 20px;
-      text-align: center;
-      color: #555;
-    }
   </style>
 </head>
 <body>
   <div class="navbar">
-    <a href="about.html">Home</a>
+    <a href="about.html">About</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="content">
-    <img src="images/camilo.jpeg" alt="Camilo">
+    <div class="container">
+      <img src="images/camilo.jpeg" alt="Camilo">
+    </div>
     <div class="text-container">
-      <p>Camilo Romero</p>
-      <p>Software Engineer</p>
-      <p class="description">Full-stack software engineer with expertise in backend development and databases.</p>
+      <h1>CAMILO ROMERO, Software Engineer</h1>
+      <p class="description">Full-stack software engineer with emphasis in backend development and databases.</p>
+      <p> Here are some of my projects! </p>
+      <div class="image-grid">
+        <img src="images/game.png" alt="Image 2">
+        <img src="images/vitaminverse.png" alt="Image 3">
+      </div>
     </div>
   </div>
 </body>
 </html>
+
 
 
 
